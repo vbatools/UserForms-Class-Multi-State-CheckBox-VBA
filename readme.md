@@ -1,6 +1,6 @@
 # Multi-State CheckBox VBA Class
 
-A VBA class implementation that provides a multi-state checkbox control with three states: unchecked, checked, and indeterminate.
+A VBA class implementation that provides a multi-state checkbox control with three or more states: unchecked, checked, and indeterminate.
 
 ## Features
 
