@@ -18,12 +18,17 @@ Option Explicit
 Private WithEvents clsMSCh As clsMultiStateCheckBox
 Attribute clsMSCh.VB_VarHelpID = -1
 
+
+Private Sub chkCyclic_Click()
+    clsMSCh.Cyclic = chkCyclic.value
+End Sub
+
 Private Sub clsMSCh_Click(control As Object, Item As Byte, ByVal CodeIcon As Long, ByVal StateText As String)
     lbValue.Caption = vbNewLine & vbTab & "Item: " & Item & vbNewLine & vbTab & "Code Icon: " & CodeIcon
 End Sub
 
 Private Sub cmbSetValue_Change()
-    clsMSCh.Item = cmbSetValue.Value
+    clsMSCh.Item = cmbSetValue.value
 End Sub
 
 Private Sub UserForm_Initialize()

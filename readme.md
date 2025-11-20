@@ -10,6 +10,14 @@ A VBA class implementation that provides a multi-state checkbox control with thr
 - Customizable appearance and behavior
 - Easy integration with VBA UserForms
 - Reusable class module for consistent checkbox behavior
+- Cyclic/non-cyclic state switching (property `Cyclic`)
+- Ability to set/get state by text (property `StateText`)
+- Method to get all available states (`GetAllStates`)
+- Improved error handling and validation
+- Ability to set font name and size factor (properties `FontName` and `FontSizeFactor`)
+- Ability to get/set current icon (property `CurrentIcon`)
+- Method to set color for specific state (`SetStateColor`)
+- Method to reset to initial state (`ResetToInitialState`)
 
 ## Default Icons and Colors
 
@@ -70,10 +78,48 @@ Private Sub UserForm_Initialize()
     ' Initialize with custom parameters
     mCheckBox.Initialize Me.Label1, 0, customIcons, customColors
 End Sub
-
 Private Sub UserForm_Terminate()
     Set mCheckBox = Nothing
 End Sub
+
+' Additional Features:
+' - Cyclic property: Controls whether the checkbox cycles through states or stops at the last state
+' Example of using Cyclic property:
+' mCheckBox.Cyclic = False ' This will make the checkbox stop at the last state instead of cycling back to the first
+'
+' - StateText property: Allows getting and setting the state by text value
+' Example of using StateText property:
+' Dim currentState As String
+' currentState = mCheckBox.StateText ' Gets the current state text
+' mCheckBox.StateText = ChrW$(59194) ' Sets the state to the specified text (in this case, checked state)
+'
+' - GetAllStates method: Returns an array of all available state texts
+' Example of using GetAllStates method:
+' Dim allStates As Variant
+' allStates = mCheckBox.GetAllStates ' Gets all available state texts
+'
+' - FontName property: Allows setting the font name for the checkbox
+' Example of using FontName property:
+' mCheckBox.FontName = "Wingdings" ' Sets the font to Wingdings
+'
+' - FontSizeFactor property: Allows setting the font size factor for scaling
+' Example of using FontSizeFactor property:
+' mCheckBox.FontSizeFactor = 0.8 ' Sets the font size to 80% of the width
+'
+' - CurrentIcon property: Allows getting and setting the current icon by code
+' Example of using CurrentIcon property:
+' Dim currentIcon As Long
+' currentIcon = mCheckBox.CurrentIcon ' Gets the current icon code
+' mCheckBox.CurrentIcon = 59194 ' Sets the current icon to a specific code
+'
+' - SetStateColor method: Allows setting the color for a specific state
+' Example of using SetStateColor method:
+' mCheckBox.SetStateColor 1, RGB(255, 0, 0) ' Sets the second state color to red
+'
+' - ResetToInitialState method: Allows resetting the checkbox to an initial state
+' Example of using ResetToInitialState method:
+' mCheckBox.ResetToInitialState 0 ' Resets the checkbox to the first state (index 0)
+
 ```
 
 4. The checkbox will now function with three states that cycle when clicked
