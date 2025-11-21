@@ -576,7 +576,8 @@ End Sub
 ```vba
 ' Тестирование инициализации
 Sub TestInitialization()
-    Dim checkBox As New clsMultiStateCheckBox
+    Dim checkBox As clsMultiStateCheckBox
+    Set checkBox = New clsMultiStateCheckBox
     Dim form As Object
     Set form = CreateObject("Forms.Label") ' Имитация элемента управления
     
@@ -592,7 +593,8 @@ End Sub
 
 ' Тестирование переключения состояний
 Sub TestStateCycling()
-    Dim checkBox As New clsMultiStateCheckBox
+    Dim checkBox As clsMultiStateCheckBox
+    Set checkBox = New clsMultiStateCheckBox
     Dim form As Object
     Set form = CreateObject("Forms.Label")
     
@@ -613,7 +615,8 @@ End Sub
 ```vba
 ' Тестирование валидации параметров
 Sub TestValidation()
-    Dim checkBox As New clsMultiStateCheckBox
+    Dim checkBox As clsMultiStateCheckBox
+    Set checkBox = New clsMultiStateCheckBox
     Dim form As Object
     Set form = CreateObject("Forms.Label")
     

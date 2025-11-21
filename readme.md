@@ -82,43 +82,60 @@ Private Sub UserForm_Terminate()
     Set mCheckBox = Nothing
 End Sub
 
-' Additional Features:
-' - Cyclic property: Controls whether the checkbox cycles through states or stops at the last state
-' Example of using Cyclic property:
-' mCheckBox.Cyclic = False ' This will make the checkbox stop at the last state instead of cycling back to the first
-'
-' - StateText property: Allows getting and setting the state by text value
-' Example of using StateText property:
-' Dim currentState As String
-' currentState = mCheckBox.StateText ' Gets the current state text
-' mCheckBox.StateText = ChrW$(59194) ' Sets the state to the specified text (in this case, checked state)
-'
-' - GetAllStates method: Returns an array of all available state texts
-' Example of using GetAllStates method:
-' Dim allStates As Variant
-' allStates = mCheckBox.GetAllStates ' Gets all available state texts
-'
-' - FontName property: Allows setting the font name for the checkbox
-' Example of using FontName property:
-' mCheckBox.FontName = "Wingdings" ' Sets the font to Wingdings
-'
-' - FontSizeFactor property: Allows setting the font size factor for scaling
-' Example of using FontSizeFactor property:
-' mCheckBox.FontSizeFactor = 0.8 ' Sets the font size to 80% of the width
-'
-' - CurrentIcon property: Allows getting and setting the current icon by code
-' Example of using CurrentIcon property:
-' Dim currentIcon As Long
-' currentIcon = mCheckBox.CurrentIcon ' Gets the current icon code
-' mCheckBox.CurrentIcon = 59194 ' Sets the current icon to a specific code
-'
-' - SetStateColor method: Allows setting the color for a specific state
-' Example of using SetStateColor method:
-' mCheckBox.SetStateColor 1, RGB(255, 0, 0) ' Sets the second state color to red
-'
-' - ResetToInitialState method: Allows resetting the checkbox to an initial state
-' Example of using ResetToInitialState method:
-' mCheckBox.ResetToInitialState 0 ' Resets the checkbox to the first state (index 0)
+### Additional Features:
+
+- **Cyclic property**: Controls whether the checkbox cycles through states or stops at the last state
+    - Example of using Cyclic property:
+    ```vba
+    mCheckBox.Cyclic = False ' This will make the checkbox stop at the last state instead of cycling back to the first
+    ```
+
+- **StateText property**: Allows getting and setting the state by text value
+    - Example of using StateText property:
+    ```vba
+    Dim currentState As String
+    currentState = mCheckBox.StateText ' Gets the current state text
+    mCheckBox.StateText = ChrW$(59194) ' Sets the state to the specified text (in this case, checked state)
+    ```
+
+- **GetAllStates method**: Returns an array of all available state texts
+    - Example of using GetAllStates method:
+    ```vba
+    Dim allStates As Variant
+    allStates = mCheckBox.GetAllStates ' Gets all available state texts
+    ```
+
+- **FontName property**: Allows setting the font name for the checkbox
+    - Example of using FontName property:
+    ```vba
+    mCheckBox.FontName = "Wingdings" ' Sets the font to Wingdings
+    ```
+
+- **FontSizeFactor property**: Allows setting the font size factor for scaling
+    - Example of using FontSizeFactor property:
+    ```vba
+    mCheckBox.FontSizeFactor = 0.8 ' Sets the font size to 80% of the width
+    ```
+
+- **CurrentIcon property**: Allows getting and setting the current icon by code
+    - Example of using CurrentIcon property:
+    ```vba
+    Dim currentIcon As Long
+    currentIcon = mCheckBox.CurrentIcon ' Gets the current icon code
+    mCheckBox.CurrentIcon = 59194 ' Sets the current icon to a specific code
+    ```
+
+- **SetStateColor method**: Allows setting the color for a specific state
+    - Example of using SetStateColor method:
+    ```vba
+    mCheckBox.SetStateColor 1, RGB(255, 0, 0) ' Sets the second state color to red
+    ```
+
+- **ResetToInitialState method**: Allows resetting the checkbox to an initial state
+    - Example of using ResetToInitialState method:
+    ```vba
+    mCheckBox.ResetToInitialState 0 ' Resets the checkbox to the first state (index 0)
+    ```
 
 ```
 

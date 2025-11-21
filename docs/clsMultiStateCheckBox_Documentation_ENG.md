@@ -576,7 +576,8 @@ For testing the class functionality, it's recommended to create a test form with
 ```vba
 ' Testing initialization
 Sub TestInitialization()
-    Dim checkBox As New clsMultiStateCheckBox
+    Dim checkBox As clsMultiStateCheckBox
+    Set checkBox = New clsMultiStateCheckBox
     Dim form As Object
     Set form = CreateObject("Forms.Label") ' Mock control
     
@@ -592,7 +593,8 @@ End Sub
 
 ' Testing state cycling
 Sub TestStateCycling()
-    Dim checkBox As New clsMultiStateCheckBox
+    Dim checkBox As clsMultiStateCheckBox
+    Set checkBox = New clsMultiStateCheckBox
     Dim form As Object
     Set form = CreateObject("Forms.Label")
     
@@ -613,7 +615,8 @@ End Sub
 ```vba
 ' Testing parameter validation
 Sub TestValidation()
-    Dim checkBox As New clsMultiStateCheckBox
+    Dim checkBox As clsMultiStateCheckBox
+    Set checkBox = New clsMultiStateCheckBox
     Dim form As Object
     Set form = CreateObject("Forms.Label")
     
