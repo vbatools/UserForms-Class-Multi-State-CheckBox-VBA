@@ -81,6 +81,7 @@ End Sub
 Private Sub UserForm_Terminate()
     Set mCheckBox = Nothing
 End Sub
+```
 
 ### Дополнительные возможности:
 
@@ -136,8 +137,6 @@ End Sub
     ```vba
     mCheckBox.ResetToInitialState 0 ' Сбрасывает флажок в первое состояние (индекс 0)
     ```
-
-```
 
 4. Флажок теперь будет функционировать с тремя состояниями, которые переключаются при клике
 
