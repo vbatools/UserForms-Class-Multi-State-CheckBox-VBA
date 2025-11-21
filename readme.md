@@ -81,6 +81,7 @@ End Sub
 Private Sub UserForm_Terminate()
     Set mCheckBox = Nothing
 End Sub
+```
 
 ### Additional Features:
 
@@ -136,8 +137,6 @@ End Sub
     ```vba
     mCheckBox.ResetToInitialState 0 ' Resets the checkbox to the first state (index 0)
     ```
-
-```
 
 4. The checkbox will now function with three states that cycle when clicked
 
