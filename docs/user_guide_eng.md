@@ -1,13 +1,9 @@
-# VBA Multi-State Checkbox Class
-
-![User Forms Multi-State Checkbox Demo](User_Forms.gif)
-
-This repository contains a VBA implementation of a multi-state checkbox control that can be used in Excel UserForms. The checkbox class provides three or more states (unchecked, checked, indeterminate) with customizable appearance and behavior.
+# User Guide for clsMultiStateCheckBox
 
 ## Table of Contents
-1. [Features](#features)
-2. [Components](#components)
-3. [Installation](#installation)
+1. [Introduction](#introduction)
+2. [System Requirements](#system-requirements)
+3. [Installation and Setup](#installation-and-setup)
 4. [Quick Start](#quick-start)
 5. [Main Features](#main-features)
 6. [Working with Controls](#working-with-controls)
@@ -16,41 +12,46 @@ This repository contains a VBA implementation of a multi-state checkbox control 
 9. [Adding Icons](#adding-icons)
 10. [Working with Style Collection](#working-with-style-collection)
 11. [Troubleshooting](#troubleshooting)
-12. [FAQ](#faq)
+12. [Frequently Asked Questions](#frequently-asked-questions)
 
-## Features
+## Introduction
 
-- Three-state checkbox functionality (unchecked, checked, indeterminate)
-- Customizable appearance and behavior
-- Easy integration with VBA UserForms
-- Reusable class module for consistent checkbox behavior
-- Cyclic/non-cyclic state switching (property `Cyclic`)
-- Ability to set/get state by text (property `StateText`)
-- Method to get all available states (`GetAllStates`)
-- Improved error handling and validation
-- Ability to set font name and size factor (properties `FontName` and `FontSizeFactor`)
-- Ability to get/set current icon (property `CurrentIcon`)
-- Method to set color for specific state (`SetStateColor`)
-- Method to reset to initial state (`ResetToInitialState`)
+The `clsMultiStateCheckBox` class implements a multi-state checkbox for VBA UserForms with three or more states: unchecked, checked, and indeterminate, as well as other custom states. This class provides customizable appearance and behavior with easy integration into VBA UserForms.
 
-## Components
+### What This Project Can Do:
+- Apply modern design to checkbox controls
+- Provide multi-state functionality beyond standard checkbox
+- Configure colors and fonts for checkboxes
+- Add icons and visual elements
+- Manage visibility and state of checkbox controls
 
-- `clsMultiStateCheckBox.cls`: The main checkbox class implementation
-- `frmTestClass.frm`: Test form demonstrating checkbox usage
-- `modShowForms.bas`: Module containing form display functions
-- Documentation in the `docs/` folder:
-  - [`docs/technical_documentation_eng.md`](docs/technical_documentation_eng.md) - Technical documentation in English
-  - [`docs/technical_documentation_rus.md`](docs/technical_documentation_rus.md) - Technical documentation in Russian
-  - [`docs/user_guide_eng.md`](docs/user_guide_eng.md) - User guide in English
-  - [`docs/user_guide_rus.md`](docs/user_guide_rus.md) - User guide in Russian
-  - [`docs/implementation_examples_eng.md`](docs/implementation_examples_eng.md) - Implementation examples in English
-  - [`docs/implementation_examples_rus.md`](docs/implementation_examples_rus.md) - Implementation examples in Russian
+## System Requirements
 
-## Installation
+- Microsoft Excel (2010 or newer recommended)
+- VBA support enabled
+- Microsoft Forms 2.0 Object Library
+- Windows 7 or newer
 
-1. Download the `clsMultiStateCheckBox.cls` file from the `vba-files/Class/` directory
-2. Import the class into your VBA project
-3. Ensure you have the Microsoft Forms 2.0 Object Library referenced in your project
+## Installation and Setup
+
+### Step 1: Import the Class
+1. Open Excel and go to the VBA editor (press Alt+F11)
+2. In the menu, select "File" > "Import File"
+3. Select the `clsMultiStateCheckBox.cls` file from the `vba-files/Class/` directory
+4. Click "Open" to import the class
+
+### Step 2: Configure References
+1. In the VBA editor, select "Tools" > "References"
+2. Find and check the box next to "Microsoft Forms 2.0 Object Library"
+3. Click "OK" to save changes
+
+### Step 3: Create a User Form
+1. In the VBA editor, create a new user form
+2. Add a Label control that will serve as the checkbox
+3. Add a class variable to the form:
+```vba
+Dim MultiStateCheckBox As clsMultiStateCheckBox
+```
 
 ## Quick Start
 
@@ -232,7 +233,7 @@ End With
 - Verify that the class is not initialized multiple times
 
 ### Performance Issues
-- Reduce the complexity of value formatting
+- Reduce the number of state changes during initialization
 - Avoid frequent calls to property getters during interaction
 - Use visibility and availability properties appropriately
 
@@ -241,7 +242,7 @@ End With
 - "Method or data member not found" - check that the class is properly imported
 - "Can't assign to property" - avoid direct assignment to nested objects without checking for Nothing
 
-## FAQ
+## Frequently Asked Questions
 
 ### Question: How to change colors after initialization?
 **Answer:** Use the `SetStateColor` method to set colors for specific states after initialization.
@@ -263,7 +264,3 @@ End With
 
 ### Question: How to handle events of checkbox elements?
 **Answer:** The class provides Click and state change events that can be handled in the form module.
-
-## License
-
-This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
