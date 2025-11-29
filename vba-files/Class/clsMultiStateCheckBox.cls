@@ -374,14 +374,14 @@ Private Function BlendColor(ByVal color1 As Long, color2 As Long, factor As Doub
     Dim r As Byte, g As Byte, b As Byte
     
     ' Extract BGR components from the first color (VBA uses BGR format)
-    b1 = color1 Mod 256
+    r1 = color1 Mod 256
     g1 = (color1 \ 256) Mod 256
-    r1 = (color1 \ 6536) Mod 256
+    b1 = (color1 \ 6536) Mod 256
     
     ' Extract BGR components from the second color (VBA uses BGR format)
-    b2 = color2 Mod 256
+    r2 = color2 Mod 256
     g2 = (color2 \ 256) Mod 256
-    r2 = (color2 \ 65536) Mod 256
+    b2 = (color2 \ 65536) Mod 256
     
     ' Blend the colors
     r = r1 + (r2 - r1) * factor
