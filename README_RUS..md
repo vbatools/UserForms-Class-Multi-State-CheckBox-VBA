@@ -1,5 +1,7 @@
 # Класс VBA Multi-State Checkbox
 
+**Русский** | [English](README.md) | [UserForms-Class-ALL](https://github.com/vbatools/UserForms-Class-ALL/blob/main/README_RUS.md)
+
 ![Демонстрация проекта](User_Forms.gif)
 
 Этот репозиторий содержит реализацию на VBA многопозиционного флажка, который можно использовать в Excel UserForms. Класс флажка обеспечивает три или более состояний (снят, установлен, неопределён) с настраиваемым внешним видом и поведением.

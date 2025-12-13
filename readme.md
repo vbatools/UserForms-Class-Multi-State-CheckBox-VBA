@@ -1,5 +1,7 @@
 # VBA Multi-State Checkbox Class
 
+**English** | [Русский](README_RUS..md) | [UserForms-Class-ALL](https://github.com/vbatools/UserForms-Class-ALL/tree/main)
+
 ![Project Demo](User_Forms.gif)
 
 This repository contains a VBA implementation of a multi-state checkbox control that can be used in Excel UserForms. The checkbox class provides three or more states (unchecked, checked, indeterminate) with customizable appearance and behavior.
